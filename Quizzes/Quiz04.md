@@ -37,5 +37,6 @@ else:
 
 ## Flow Diagram
 
-![Uploading IMG_3127.jpg…]()
+![IMG_3127](https://github.com/user-attachments/assets/bdbd22c8-eaf1-40ad-8351-104273ed560c)
+
 
