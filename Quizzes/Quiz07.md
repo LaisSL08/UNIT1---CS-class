@@ -1,4 +1,4 @@
-![IMG_2936](https://github.com/user-attachments/assets/66915878-b6e1-4c84-983e-2ad4b476cf76)# Quiz 07
+# Quiz 07
 
 ![Captura de tela 2024-09-16 224129](https://github.com/user-attachments/assets/fdab09f5-a147-4d6a-9760-3d912b0c6712)
 
