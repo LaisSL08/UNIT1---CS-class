@@ -30,6 +30,7 @@ print(f"The solution is {sol}")
 
 ## Code For HL
 
+```py
 listA = list(map(int, input("Enter list A (space-separated integers): ").split()))
 listB = list(map(int, input("Enter list B (space-separated integers): ").split()))
 
@@ -42,6 +43,8 @@ sol = any(
 )
 
 print(sol)
+
+```
 
 ## Proof of Work
 
