@@ -13,20 +13,25 @@
 ## Code
 
 ```py
+def find_max(numbers):
+    M = None
+    for i in range(len(numbers)):
+        if M is None or numbers[i] > M:
+            M = numbers[i]
+        
+        print(f"Step {i}: Current max is {M}")
+    
+    return M
 
-def right_justify_hello(width=10):
-    y = "hello"
-    justified_string = y.rjust(width, '.')
-    print(justified_string)
-
-right_justify_hello(10)
+numbers = [3, 5, 10, 2, 15]
+final_max = find_max(numbers)
+print(f"The largest number is: {final_max}")
 
 ```
 
 ## Proof of Work
 
-
-
+![Captura de tela 2024-09-17 112124](https://github.com/user-attachments/assets/41c2afdd-f9dd-4ed0-8af2-a80dbeb7fe3f)
 
 ## Flow Diagram
 
