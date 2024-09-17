@@ -14,7 +14,12 @@
 
 ```py
 
+def right_justify_hello(width=10):
+    y = "hello"
+    justified_string = y.rjust(width, '.')
+    print(justified_string)
 
+right_justify_hello(10)
 
 ```
 
