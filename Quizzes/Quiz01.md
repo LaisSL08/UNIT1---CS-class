@@ -9,6 +9,23 @@
 ## Code
 
 ```py
+text = input("Input text: ")
+words = text.split()
+
+result = ""
+for word in words:
+    if len(word) > 2:
+        word = word[0] + str(len(word) - 2) + word[-1]
+    result = result + word + " "
+
+print(result.strip())
+
+```
+
+## "Advanced" Code
+
+
+```py
 
 words = input("Input text: ").split()  
 result = ' '.join([word if len(word) <= 2 else word[0] + str(len(word) - 2) + word[-1] for word in words]) 
