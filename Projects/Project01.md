@@ -29,6 +29,7 @@ My proposed solution is a calculator for basic arithmetic operations like additi
    * View the stored passwords (only if they re-enter the secret code).
 5. Save passwords permanently and securely
 6. Use the terminal to interact with the user.
+7. 
 
 
 # Criterion B: Design
@@ -58,3 +59,5 @@ proposed solution. The lock indicates encryption.
 |             |                             |                                                                 |                |                        |           |
 |             |                             |                                                                 |                |                        |           |
 |             |                             |                                                                 |                |                        |           |
+
+## Sources 
