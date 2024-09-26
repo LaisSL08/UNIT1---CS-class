@@ -8,14 +8,14 @@ My client owns **Smile**, a small mental health clinic, where he manages a team 
 ## Proposed Solution
 My proposed solution is a calculator for basic arithmetic operations like addition, subtraction, multiplication, and division. However, this calculator has a secret function that is only revealed when a hidden code is entered. Once the correct secret code is typed into the calculator, it transforms into a basic password manager.The password manager will securely store and retrieve passwords, allowing staff to safely access the clinic’s digital systems without compromising sensitive information. This solution aims to enhance both the productivity and security of the clinic, providing an easy way to manage passwords.
 
-**Plan for the solution:**
+### Plan for the solution:
 
 1. Basic arithmetic operations function (addition, subtraction, multiplication, and division).
 2. A secret code feature that transforms into a basic password manager.
 3. Password database/storage.
 4. Easy to understand/simple design.
 
-**Concerns/Things to be solved:**
+### Concerns/Things to be solved:
 
 1. Employees using bad methods (e.g., shared documents, physical notes) to manage passwords.
 2. Increased risk of data breaches and unauthorized access.
@@ -27,9 +27,9 @@ My proposed solution is a calculator for basic arithmetic operations like additi
 4. In password manager mode, the user should be able to perform CRUD operations (Create, Replace, Update, Delete):
    * Add a password (for example, for a website).
    * View the stored passwords (only if they re-enter the secret code).
-5. Save passwords permanently and securely
-6. Use the terminal to interact with the user.
-7. 
+5. Save passwords permanently and securely.
+7. Use the terminal to interact with the user.
+8. Block the program if the wrong code is typed in **View the stored passwords**.
 
 
 # Criterion B: Design
