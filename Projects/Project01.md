@@ -54,13 +54,6 @@ proposed solution. The lock indicates encryption.
 
 ## Record of Tasks
 
-| Task Number | Planned Action              | Planned Outcome                                                 | Time Estimated | Target Completion Date | Criterion |
-|-------------|-----------------------------|-----------------------------------------------------------------|----------------|------------------------|-----------|
-| 1           | 1st Meeting with the client | Obtained a problem definition, understand what the situation is | 10 min         | Sep 7                  | A         |
-|             |                             |                                                                 |                |                        |           |
-|             |                             |                                                                 |                |                        |           |
-|             |                             |                                                                 |                |                        |           |
-|             |                             |                                                                 |                |                        |           |
 
 # Criterion C: Development 
 
@@ -140,7 +133,7 @@ def lpasswords():
         with open(pssfile, 'r') as file:
             for line in file:
                 patientlogin, password = line.split(':')
-                passwords[patientlogin] = password.strip()  # Strip newline characters
+                passwords[patientlogin] = password
     except FileNotFoundError:
         print("File not found. Starting an empty list.")
     return passwords
