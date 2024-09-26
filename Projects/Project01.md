@@ -53,7 +53,17 @@ proposed solution. The lock indicates encryption.
 ### Test plan
 
 ## Record of Tasks
-
+| Task Number | Planned Action                                  | Planned Outcome                                                                                                                                       | Time Estimated | Target Completion Date | Criterion |
+|-------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------|-----------|
+| 1           | 1st Meeting with the client                     | Obtained a problem definition, understand what the situation is                                                                                       | 1 hour         | Sep 7                  | A         |
+| 2           | Wireframe for the calculator/password manager   | Complete figurative simple design of the calculator/password management tool                                                                          | 4 hours        | Sep 10                 | B         |
+| 3           | System and Flow Diagrams                        | Identify the software and hardware components of the solution, and create a graphical representation of a program developed for the proposed solution | 2 hours        | Sep 11                 | B         |
+| 4           | Test Plan                                       | Inputs and outputs based on daily life experience                                                                                                     | 30 min         | Sep 12                 | B         |
+| 5           | Development                                     | A functional calculator with a hidden password manager                                                                                                | 6 hours        | Sep 13                 | C         |
+| 6           | Password encryption feature                     | Enhanced security for stored passwords                                                                                                                | 2 hours        | Sep 16                 | C         |
+| 7           | 2nd meeting with my client                      | Gather Feedback                                                                                                                                       | 1 hour         | Sep 18                 | C         |
+| 8           | Address feedback and make necessary adjustments | Improved user experience and functionality                                                                                                            | 2 hours        | Sep 20                 | C         |
+| 9           | Final meeting                                   | Obtain final approval and feedback                                                                                                                    | 1 hour         | Sep 25                 | C         |
 
 # Criterion C: Development 
 
