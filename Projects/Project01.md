@@ -34,7 +34,7 @@ My proposed solution is a calculator for basic arithmetic operations like additi
 
 # Criterion B: Design
 ### System Diagram
-![Untitled](https://github.com/user-attachments/assets/39d2fff9-67d5-40ec-aa66-a78a5194641e)
+
 **Fig 1** System Diagram showing the minimal requirement for the hardware and software used for
 proposed solution. The lock indicates encryption.
 
@@ -43,6 +43,8 @@ proposed solution. The lock indicates encryption.
 ### Flow diagrams for algorithms
 ![flow](https://github.com/user-attachments/assets/93f4a0fb-66b8-4993-9b3d-b0b47deaeb82)
 **Fig. 1** This is the flow diagram for the algorithm used to search in the data file...
+**Fig. 2** This is the flow diagram for the algorithm used to search in the data file...
+**Fig. 3** This is the flow diagram for the algorithm used to search in the data file...
 
 ### Data storage
 
@@ -60,4 +62,61 @@ proposed solution. The lock indicates encryption.
 |             |                             |                                                                 |                |                        |           |
 |             |                             |                                                                 |                |                        |           |
 
-## Sources 
+# Criterion C: Development 
+
+## Code
+
+```py
+# Sum Function
+def add(num1, num2):
+    return num1 + num2
+
+# Subtraction Function
+def subtract(num1, num2):
+    return num1 - num2
+
+# Multiplication Function
+def multiply(num1, num2):
+    return num1 * num2
+
+# Division Function
+def divide(num1, num2):
+    if num2 == 0:
+        return "Error! Please input another value, Division by zero is not allowed"
+    else
+        return num1 / num2
+
+def calculator():
+    # Ask user to input the math expression
+    expression = input("Enter an expression (example: 2 + 2 or 4 * 3, etc): ")
+
+    # Check the operator and solve the input
+    if '+' in expression:
+        num1, num2 = expression.split('+')
+        result = add(float(num1), float(num2))
+        operation = '+'
+    elif '-' in expression:
+        num1, num2 = expression.split('-')
+        result = subtract(float(num1), float(num2))
+        operation = '-'
+    elif '*' in expression:
+        num1, num2 = expression.split('*')
+        result = multiply(float(num1), float(num2))
+        operation = '*'
+    elif '/' in expression:
+        num1, num2 = expression.split('/')
+        result = divide(float(num1), float(num2))
+        operation = '/'
+    else:
+        return "Error! Please enter a valid expression with one of the operators (+, -, *, /)."
+
+    # Show the result
+    return f"{num1} {operation} {num2} = {result}"
+
+# Run the calculator
+print(calculator())
+
+```
+## Proof of Work
+
+# Sources
