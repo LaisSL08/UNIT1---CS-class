@@ -41,7 +41,7 @@ proposed solution. The lock indicates encryption.
 
 
 ### Flow diagrams for algorithms
-![flow](https://github.com/user-attachments/assets/93f4a0fb-66b8-4993-9b3d-b0b47deaeb82)
+
 **Fig. 1** This is the flow diagram for the algorithm used to search in the data file...
 **Fig. 2** This is the flow diagram for the algorithm used to search in the data file...
 **Fig. 3** This is the flow diagram for the algorithm used to search in the data file...
@@ -51,6 +51,13 @@ proposed solution. The lock indicates encryption.
 ### Sketches of the application (wireframe diagrams)
 
 ### Test plan
+
+| Input | Output                              |
+|-------|-------------------------------------|
+| 5+2   | 5 + 2 = 7.0                         |
+| 4*8   | 4 * 8 = 32.0                        |
+| 20/5  | 20 / 5 = 4.0                        |
+| 53176 | Welcome to Smile Password Manager!  |
 
 ## Record of Tasks
 | Task Number | Planned Action                                  | Planned Outcome                                                                                                                                       | Time Estimated | Target Completion Date | Criterion |
