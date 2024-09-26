@@ -10,15 +10,15 @@ My solution is a calculator for basic arithmetic operations like addition, subtr
 
 **Requirements:**
 
--Basic arithmetic operations function (addition, subtraction, multiplication, and division).
--A secret code feature that transforms into a basic password manager.
--Password database/storage.
--Easy to understand/simple design.
+1. Basic arithmetic operations function (addition, subtraction, multiplication, and division).
+2. A secret code feature that transforms into a basic password manager.
+3. Password database/storage.
+4. Easy to understand/simple design.
 
 **Concerns/Things to be solved:**
 
--Employees using bad methods (e.g., shared documents, physical notes) to manage passwords.
--Increased risk of data breaches and unauthorized access.
+1. Employees using bad methods (e.g., shared documents, physical notes) to manage passwords.
+2. Increased risk of data breaches and unauthorized access.
 
 ## Success Criteria
 1. The calculator should accept user input to perform basic operations (addition, subtraction, multiplication, division).
