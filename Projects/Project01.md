@@ -88,7 +88,7 @@ def divide(num1, num2):
 
 def calculator():
     # Ask user to input the math expression
-    expression = input("Enter an expression (example: 2 + 2 or 4 * 3, etc): ")
+    expression = input("Sorry, please enter again: ")
 
     # Check the operator and solve the input
     if '+' in expression:
@@ -113,123 +113,132 @@ def calculator():
     # Show the result
     return f"{num1} {operation} {num2} = {result}"
 
+# Define a secret code and the corresponding password manager logic
+secretcode = "53176"
+pssfile = 'patientpasswords.txt'
+
+# Change characters to opposite Function
+def oppositecharacters(char):
+    if 'a' <= char <= 'z':  # letters
+        return chr(219 - ord(char))  # Opposite letters
+    elif '0' <= char <= '9':  # Numbers
+        return chr(105 - ord(char))  # Opposite Numbers
+    else:
+        return char  # Return any other character
+
+# Hide or reveal (reverse password) Function
+def hrpassword(password):
+    result = ""
+    for char in password[::-1]:
+        result += oppositecharacters(char)
+    return result
+
+# Load passwords Function
+def lpasswords():
+    passwords = {}
+    try:
+        with open(pssfile, 'r') as file:
+            for line in file:
+                patientlogin, password = line.split(':')
+                passwords[patientlogin] = password.strip()  # Strip newline characters
+    except FileNotFoundError:
+        print("File not found. Starting an empty list.")
+    return passwords
+
+# Save passwords Function
+def spasswords(passwords):
+    with open(pssfile, 'w') as file:
+        for patientlogin, password in passwords.items():
+            file.write(f"{patientlogin}:{password}\n")
+
+# Masked Form Function
+def mpassword(password):
+    if len(password) > 2:
+        return password[0] + "*" * (len(password) - 2) + password[-1]
+    return password
+
+# View passwords Function
+def vpasswords(passwords):
+    print("\nStored Passwords:")
+    for patientlogin, password in passwords.items():
+        hidden = hrpassword(password)
+        maskedformpassword = mpassword(hidden)
+        print(f"{patientlogin}: {maskedformpassword}")
+    print()
+
+# Add a new password Function
+def apassword(passwords):
+    patientlogin = input("Enter the full patient name: ")
+    password = input("Enter the password: ")
+    revealed = hrpassword(password)
+    passwords[patientlogin] = revealed
+    spasswords(passwords)
+    print(f"Password for {patientlogin} added successfully.\n")
+
+# Update password Function
+def upassword(passwords):
+    patientlogin = input("Enter the full patient name to update: ")
+    if patientlogin in passwords:
+        newpassword = input("Enter the new password: ")
+        hidden = hrpassword(newpassword)
+        passwords[patientlogin] = hidden
+        spasswords(passwords)
+        print(f"Password for {patientlogin} updated successfully.\n")
+    else:
+        print(f"Patient not registered.\n")
+
+# Delete password Function
+def dpassword(passwords):
+    patientlogin = input("Enter the account name to delete: ")
+    if patientlogin in passwords:
+        del passwords[patientlogin]
+        spasswords(passwords)
+        print(f"Password for {patientlogin} deleted successfully.\n")
+    else:
+        print(f"Patient not registered.\n")
+
+# Password Manager 
+def password_manager():
+    passwords = lpasswords()
+    while True:
+        print("\nPassword Manager:")
+        print("1. Add a password")
+        print("2. View all passwords")
+        print("3. Update a password")
+        print("4. Delete a password")
+        print("5. Exit")
+        
+        choice = input("Choose one of the options: ")
+        if choice == '1':
+            apassword(passwords)
+        elif choice == '2':
+            code = input("Enter the secret code to view passwords: ")
+            if code == secretcode:
+                vpasswords(passwords)
+            else:
+                print("Access denied.\n")
+        elif choice == '3':
+            upassword(passwords)
+        elif choice == '4':
+            dpassword(passwords)
+        elif choice == '5':
+            print("Exiting password manager.")
+            break
+        else:
+            print("Please choose an option between 1 and 5")
+
+# Entry point of the program
+expression = input("Enter an expression (example: 2 + 2 or 4 * 3, etc): ")
+
 if expression == "53176":
     print("Welcome to Smile Password Manager!")
-    pssfile = 'patientpasswords.txt'
-    secretcode = "53176"
-    #Change the characters to the opposite Function
-    def oppositecharacters(char):
-        if 'a' <= char <= 'z':  #letters
-            return chr(219 - ord(char))  #Opposite letters
-        elif '0' <= char <= '9':  #Numbers
-            return chr(105 - ord(char))  #Opposite Numbers
-        else:
-            return char  #Return any other character
-    #hide or reveal (reverse password) Function
-    def hrpassword(password):
-        result = ""
-        for char in password[::-1]:  
-            result += oppositecharacters(char)
-        return result
-    #Print hidden password
-    hidden = hrpassword(password)
-        print("", hidden)
-    #Print the revealed password
-    revealed = hrpassword(hidden)
-        print("", revealed)
-    #Load passwords Function
-    def lpasswords():
-        passwords = {}
-        try:
-            with open(pssfile, 'r') as file:  
-                for line in file:
-                    patientlogin, password = line.split(':') 
-                    passwords[patientlogin] = password  
-        except FileNotFoundError:
-            print("File not found. Starting an empty list.")
-        return passwords
-    #Save passwords Function
-    def spassword(passwords):
-        with open(pssfile, 'w') as file:
-            for patientlogin, password in passwords.items():
-                file.write(f"{patientlogin}:{password}\n")
-    #Masked Form Function
-    def mpassword(password):
-        if len(password) > 2:
-            return password[0] + "*" * (len(password) - 2) + password[-1]
-        return password  
-    #View passwords Function
-    def vpasswords(passwords):
-        print("\nStored Passwords:")
-        for patientlogin, password in passwords.items():
-            hidden = hrpassword(password)
-            maskedformpassword = mpassword(hrpassword)
-            print(f"{patientlogin}: {maskedformpassword}")
-        print()
-    # Add a new password Function
-    def apassword(passwords):
-        patientlogin = input("Enter the full patient name: ")
-        password = input("Enter the password: ")
-        revealed = hrpassword(password)
-        passwords[patientlogin] = revealed
-        spasswords(passwords)
-        print(f"Password for {patientlogin} added successfully.\n")
-    #Update password Function
-    def upassword(passwords):
-        patientlogin = input("Enter the full patient name to update: ")
-        if patientlogin in passwords:
-            newpassword = input("Enter the new password: ")
-            hidden = hrpassword(password)
-            passwords[patientlogin] = hidden
-            spasswords(passwords)
-            print(f"Password for {patientlogin} updated successfully.\n")
-        else:
-            print(f"Patient not registered.\n")
-    #Delete password Function
-    def dpassword(passwords):
-        patientlogin = input("Enter the account name to delete: ")
-        if patientlogin in passwords:
-            del passwords[patientlogin]
-            spasswords(passwords)
-            print(f"Password for {patientlogin} deleted successfully.\n")
-        else:
-            print(f"Patient not registered.\n")
-    #Password Manager 
-    def password_manager():
-        passwords = lpasswords()
-        while True:
-            print("\nPassword Manager:")
-            print("1. Add a password")
-            print("2. View all passwords")
-            print("3. Update a password")
-            print("4. Delete a password")
-            print("5. Exit")
-            
-        choice = input("Choose one of the options: ")
-            if choice == '1':
-                apassword(passwords)
-            elif choice == '2':
-                code = input("Enter the secret code to view passwords: ")
-                if code == secretcode:
-                    vpasswords(passwords)
-                else:
-                    print("Access denied.\n")
-            elif choice == '3':
-                upassword(passwords)
-            elif choice == '4':
-                dpassword(passwords)
-            elif choice == '5':
-                print("Exiting password manager.")
-                break
-            else:
-                print("Please choose an option between 1 and 5")
-    else:
-        
+    password_manager()
+else:
     # Run the calculator
-        print(calculator())
+    print(calculator())
 
 ```
-## Proof of Work
+
 
 # Sources
 
