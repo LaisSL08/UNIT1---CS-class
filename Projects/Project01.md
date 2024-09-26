@@ -33,11 +33,13 @@ My proposed solution is a calculator for basic arithmetic operations like additi
 
 
 # Criterion B: Design
+
 ### System Diagram
+
+![Captura de tela 2024-09-26 152434](https://github.com/user-attachments/assets/030f216f-e315-4b8b-9f37-4e722624f92f)
 
 **Fig 1** System Diagram showing the minimal requirement for the hardware and software used for
 proposed solution. The lock indicates encryption.
-
 
 
 ### Flow diagrams for algorithms
@@ -48,8 +50,8 @@ proposed solution. The lock indicates encryption.
 
 ### Data storage
 
-### Sketches of the application (wireframe diagrams)
-
+We will use a CSV file to store the passwords for our patients, it is simple and easy to work with. This format allow us to organize patient login details and their encrypted passwords in the best way.This approach helps enhance security while doesn't overload the employees of our clinic.
+ 
 ### Test plan
 
 | Input | Output                              |
