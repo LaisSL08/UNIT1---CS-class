@@ -23,7 +23,7 @@ My proposed solution is a calculator for basic arithmetic operations like additi
 ## Success Criteria
 1. The calculator should accept user input to perform basic operations (addition, subtraction, multiplication, division).
 2. The calculator can handle typical errors (e.g., division by zero) and give appropriate feedback.
-3. If the user enters the secret code ("00998877"), the program will change modes and act as a password manager.
+3. If the user enters the secret code ("53176"), the program will change modes and act as a password manager.
 4. In password manager mode, the user should be able to perform CRUD operations (Create, Replace, Update, Delete):
    * Add a password (for example, for a website).
    * View the stored passwords (only if they re-enter the secret code).
@@ -120,3 +120,8 @@ print(calculator())
 ## Proof of Work
 
 # Sources
+
+W3schools.com. W3Schools Online Web Tutorials. (n.d.). https://www.w3schools.com/python/default.asp 
+GeeksforGeeks. (2024, September 6). Python program to make a simple calculator. https://www.geeksforgeeks.org/make-simple-calculator-using-python/ 
+GeeksforGeeks. (2024, March 18). How to build a password manager in python. https://www.geeksforgeeks.org/how-to-build-a-password-manager-in-python/ 
+ASCII TABLE
