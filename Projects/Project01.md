@@ -83,7 +83,7 @@ def multiply(num1, num2):
 def divide(num1, num2):
     if num2 == 0:
         return "Error! Please input another value, Division by zero is not allowed"
-    else
+    else:
         return num1 / num2
 
 def calculator():
@@ -113,15 +113,127 @@ def calculator():
     # Show the result
     return f"{num1} {operation} {num2} = {result}"
 
-# Run the calculator
-print(calculator())
+if expression == "53176":
+    print("Welcome to Smile Password Manager!")
+    pssfile = 'patientpasswords.txt'
+    secretcode = "53176"
+    #Change the characters to the opposite Function
+    def oppositecharacters(char):
+        if 'a' <= char <= 'z':  #letters
+            return chr(219 - ord(char))  #Opposite letters
+        elif '0' <= char <= '9':  #Numbers
+            return chr(105 - ord(char))  #Opposite Numbers
+        else:
+            return char  #Return any other character
+    #hide or reveal (reverse password) Function
+    def hrpassword(password):
+        result = ""
+        for char in password[::-1]:  
+            result += oppositecharacters(char)
+        return result
+    #Print hidden password
+    hidden = hrpassword(password)
+        print("", hidden)
+    #Print the revealed password
+    revealed = hrpassword(hidden)
+        print("", revealed)
+    #Load passwords Function
+    def lpasswords():
+        passwords = {}
+        try:
+            with open(pssfile, 'r') as file:  
+                for line in file:
+                    patientlogin, password = line.split(':') 
+                    passwords[patientlogin] = password  
+        except FileNotFoundError:
+            print("File not found. Starting an empty list.")
+        return passwords
+    #Save passwords Function
+    def spassword(passwords):
+        with open(pssfile, 'w') as file:
+            for patientlogin, password in passwords.items():
+                file.write(f"{patientlogin}:{password}\n")
+    #Masked Form Function
+    def mpassword(password):
+        if len(password) > 2:
+            return password[0] + "*" * (len(password) - 2) + password[-1]
+        return password  
+    #View passwords Function
+    def vpasswords(passwords):
+        print("\nStored Passwords:")
+        for patientlogin, password in passwords.items():
+            hidden = hrpassword(password)
+            maskedformpassword = mpassword(hrpassword)
+            print(f"{patientlogin}: {maskedformpassword}")
+        print()
+    # Add a new password Function
+    def apassword(passwords):
+        patientlogin = input("Enter the full patient name: ")
+        password = input("Enter the password: ")
+        revealed = hrpassword(password)
+        passwords[patientlogin] = revealed
+        spasswords(passwords)
+        print(f"Password for {patientlogin} added successfully.\n")
+    #Update password Function
+    def upassword(passwords):
+        patientlogin = input("Enter the full patient name to update: ")
+        if patientlogin in passwords:
+            newpassword = input("Enter the new password: ")
+            hidden = hrpassword(password)
+            passwords[patientlogin] = hidden
+            spasswords(passwords)
+            print(f"Password for {patientlogin} updated successfully.\n")
+        else:
+            print(f"Patient not registered.\n")
+    #Delete password Function
+    def dpassword(passwords):
+        patientlogin = input("Enter the account name to delete: ")
+        if patientlogin in passwords:
+            del passwords[patientlogin]
+            spasswords(passwords)
+            print(f"Password for {patientlogin} deleted successfully.\n")
+        else:
+            print(f"Patient not registered.\n")
+    #Password Manager 
+    def password_manager():
+        passwords = lpasswords()
+        while True:
+            print("\nPassword Manager:")
+            print("1. Add a password")
+            print("2. View all passwords")
+            print("3. Update a password")
+            print("4. Delete a password")
+            print("5. Exit")
+            
+        choice = input("Choose one of the options: ")
+            if choice == '1':
+                apassword(passwords)
+            elif choice == '2':
+                code = input("Enter the secret code to view passwords: ")
+                if code == secretcode:
+                    vpasswords(passwords)
+                else:
+                    print("Access denied.\n")
+            elif choice == '3':
+                upassword(passwords)
+            elif choice == '4':
+                dpassword(passwords)
+            elif choice == '5':
+                print("Exiting password manager.")
+                break
+            else:
+                print("Please choose an option between 1 and 5")
+    else:
+        
+    # Run the calculator
+        print(calculator())
 
 ```
 ## Proof of Work
 
 # Sources
 
-W3schools.com. W3Schools Online Web Tutorials. (n.d.). https://www.w3schools.com/python/default.asp 
-GeeksforGeeks. (2024, September 6). Python program to make a simple calculator. https://www.geeksforgeeks.org/make-simple-calculator-using-python/ 
-GeeksforGeeks. (2024, March 18). How to build a password manager in python. https://www.geeksforgeeks.org/how-to-build-a-password-manager-in-python/ 
-ASCII TABLE
+1. W3schools.com. W3Schools Online Web Tutorials. (n.d.). https://www.w3schools.com/python/default.asp 
+2. GeeksforGeeks. (2024, September 6). Python program to make a simple calculator. https://www.geeksforgeeks.org/make-simple-calculator-using-python/ 
+3. GeeksforGeeks. (2024, March 18). How to build a password manager in python. https://www.geeksforgeeks.org/how-to-build-a-password-manager-in-python/ 
+4. ASCII TABLE
