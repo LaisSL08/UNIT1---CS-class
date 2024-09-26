@@ -42,11 +42,22 @@ My proposed solution is a calculator for basic arithmetic operations like additi
 proposed solution. The lock indicates encryption.
 
 
-### Flow diagrams for algorithms
+### Flow diagrams for 3 algorithms used in my solution
 
-**Fig. 1** This is the flow diagram for the algorithm used to search in the data file...
-**Fig. 2** This is the flow diagram for the algorithm used to search in the data file...
-**Fig. 3** This is the flow diagram for the algorithm used to search in the data file...
+![IMG_1584](https://github.com/user-attachments/assets/6b19b32e-7e47-4e17-a958-e1721f4190a2)
+
+**Fig. 1** This is the flow diagram for the 
+
+![IMG_1585](https://github.com/user-attachments/assets/28906e0c-ee28-4f9d-ac69-c3b9fb90f13d)
+
+
+**Fig. 2** This is the flow diagram for the 
+
+![IMG_1586](https://github.com/user-attachments/assets/bba3d1b2-0e6b-42f8-a16d-7a2d60e13b1c)
+
+**Fig. 3** This is the flow diagram for the 
+
+
 
 ### Data storage
 
@@ -197,7 +208,7 @@ def upassword(passwords):
         spasswords(passwords)
         print(f"Password for {patientlogin} updated successfully.\n")
     else:
-        print(f"Patient not registered.\n")
+        print("Patient not registered.\n")
 
 # Delete password Function
 def dpassword(passwords):
@@ -207,7 +218,7 @@ def dpassword(passwords):
         spasswords(passwords)
         print(f"Password for {patientlogin} deleted successfully.\n")
     else:
-        print(f"Patient not registered.\n")
+        print("Patient not registered.\n")
 
 # Password Manager 
 def password_manager():
