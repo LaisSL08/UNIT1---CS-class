@@ -46,16 +46,16 @@ proposed solution. The lock indicates encryption.
 
 ![IMG_1584](https://github.com/user-attachments/assets/6b19b32e-7e47-4e17-a958-e1721f4190a2)
 
-**Fig. 1** This is the flow diagram for the 
+**Fig. 1** This is the flow diagram for the Masked Form Function.
 
 ![IMG_1585](https://github.com/user-attachments/assets/28906e0c-ee28-4f9d-ac69-c3b9fb90f13d)
 
 
-**Fig. 2** This is the flow diagram for the 
+**Fig. 2** This is the flow diagram for the Entry Point of my code.
 
 ![IMG_1586](https://github.com/user-attachments/assets/bba3d1b2-0e6b-42f8-a16d-7a2d60e13b1c)
 
-**Fig. 3** This is the flow diagram for the 
+**Fig. 3** This is the flow diagram for the Delete Password Function.
 
 
 
