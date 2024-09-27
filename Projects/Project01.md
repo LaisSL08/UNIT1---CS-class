@@ -29,7 +29,7 @@ My proposed solution is a calculator for basic arithmetic operations like additi
    * View the stored passwords (only if they re-enter the secret code).
 5. Save passwords permanently and securely.
 7. Use the terminal to interact with the user.
-8. Block the program if the wrong code is typed in **View the stored passwords**.
+
 
 
 # Criterion B: Design
