@@ -47,6 +47,4 @@ print("\n", ciphered_text)
 
 ## Flow Diagram
 
-
-
-
+![IMG_3529](https://github.com/user-attachments/assets/0fb87c37-f98e-4de1-a5fc-0f4498cd363f)
