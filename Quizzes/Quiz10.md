@@ -4,7 +4,7 @@
 
 ## Paper Work
 
-
+![IMG_3530](https://github.com/user-attachments/assets/d1968abe-aca0-40d9-bbf4-eaa34baaa39e)
 
 ## Code
 
@@ -41,4 +41,5 @@ powerten(input_string)
 
 ## Flow Diagram
 
+![IMG_3531](https://github.com/user-attachments/assets/1808785a-28c9-4286-8b16-56ba4877187b)
 
